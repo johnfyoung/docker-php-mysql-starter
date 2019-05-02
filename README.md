@@ -20,7 +20,36 @@ A starter project for a PHP-MySQL app that uses Docker containers.
     ```sql
     $mysqli = new mysqli(getenv("DB_HOST"), getenv("DB_USER"), getenv("DB_PASSWORD"),getenv("DB_DATABASE"));
     ```
+* Docker
+  * To build the containers:
 
+    ```bash
+    docker-compose up -d --build
+    ```
+
+  * To stop the containers:
+
+    ```bash
+    docker-compose stop
+    ```
+
+    Databse data is still intact.
+
+  * To start them again:
+
+    ```bash
+    docker-compose start
+    ```
+
+
+  * To destroy the containers:
+  
+    ```bash
+    docker-compose down
+    ```
+
+    Databse data is destroyed with it. Make sure to back up the data before doing this.
+    
 ## Notes
 
 * To connect to a container by shell:
